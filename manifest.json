@@ -1,0 +1,31 @@
+{
+    "name": "Real Helper",
+    "version": "1.0",
+    "description": "Help to explore realtor.ca and realmaster.ca",
+    "permissions": ["declarativeContent", "activeTab"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [{
+        "matches": ["https://*.realtor.ca/real-estate/*", "https://*.realmaster.com/*"],
+        "js": ["content.js"]
+    }
+    ],
+    "manifest_version": 2,
+    "page_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+          "16": "images/home-icon.png",
+          "32": "images/home-icon.png",
+          "48": "images/home-icon.png",
+          "128": "images/home-icon.png"
+        }
+    },
+    "icons": {
+    "16": "images/home-icon.png",
+    "32": "images/home-icon.png",
+    "48": "images/home-icon.png",
+    "128": "images/home-icon.png"
+    }
+}
