@@ -6,8 +6,10 @@ copyToClipboard.onclick = function (element) {
     let mln = document.getElementById("MLSNumber").textContent;
     let address = document.getElementById("propertyAddress").textContent;
     let title = document.getElementById("title").textContent;
-    let price = document.getElementById("price").textContent
-    copyTextToClipboard(`${mln}\t\t${title}\t\t\t${address}\t${price}`);
+    let price = document.getElementById("price").textContent;
+    let bedrooms = document.getElementById("bedrooms").textContent
+    let bathrooms = document.getElementById("bathrooms").textContent
+    copyTextToClipboard(`${mln}\t\t${title}\t\t\t${address}\t${price}\t${bedrooms}\t${bathrooms}`);
 };
 
 function copyTextToClipboard(text) {

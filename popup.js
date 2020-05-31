@@ -11,6 +11,8 @@ const setPropertyInfo = info => {
     document.getElementById('propertyAddress').innerHTML = info.address;
     document.getElementById('price').textContent = info.price;
     document.getElementById('title').textContent = info.title;
+    document.getElementById('bedrooms').textContent = info.bedrooms;
+    document.getElementById('bathrooms').textContent = info.bathrooms;
 };
 
 // Once the DOM is ready...

@@ -19,7 +19,9 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
             mls: document.getElementById("MLNumberVal").textContent,
             address: addr,
             price: document.getElementById('listingPrice').textContent,
-            title: document.getElementById('propertyDetailsSectionContentSubCon_Title').getElementsByClassName('propertyDetailsSectionContentValue')[0].textContent
+            title: document.getElementById('propertyDetailsSectionContentSubCon_Title').getElementsByClassName('propertyDetailsSectionContentValue')[0].textContent,
+            bedrooms: document.getElementById('BedroomIcon').getElementsByClassName('listingIconNum')[0].textContent,
+            bathrooms: document.getElementById('BathroomIcon').getElementsByClassName('listingIconNum')[0].textContent
         };
 
         // Directly respond to the sender (popup),
