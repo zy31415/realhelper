@@ -8,10 +8,9 @@ goToRealMaster.onclick = function (element) {
     var request = new XMLHttpRequest();
 
     // Open a new connection, using the GET request on the URL endpoint
-    request.open('POST', 'http://www.realmaster.com/1.5/props/autocompleteGetNext', true);
+    request.open('POST', 'https://www.realmaster.com/1.5/props/autocompleteGetNext', true);
 
     request.onload = function() {
-        alert("here");
         // Begin accessing JSON data here
         var data = JSON.parse(this.response);
 
@@ -19,7 +18,7 @@ goToRealMaster.onclick = function (element) {
             console.log(data);
             window.open(data.l[0].webUrl);
         } else {
-            alert('error');
+            alert('Access to www.realmaster.com returns error!');
         }
     }
 
