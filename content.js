@@ -13,13 +13,12 @@ chrome.runtime.sendMessage({
 chrome.runtime.onMessage.addListener((msg, sender, response) => {
     // First, validate the message's structure.
     if ((msg.from === 'popup') && (msg.subject === 'PropertyInfo')) {
-        // Collect the necessary data.
-        // (For your specific requirements `document.querySelectorAll(...)`
-        //  should be equivalent to jquery's `$(...)`.)
+
         var propertyInfo = {
             mls: document.getElementById("MLNumberVal").textContent,
             address: document.getElementById('listingAddress').textContent,
-            price: document.getElementById('listingPrice').textContent
+            price: document.getElementById('listingPrice').textContent,
+            title: document.getElementById('propertyDetailsSectionContentSubCon_Title').getElementsByClassName('propertyDetailsSectionContentValue')[0].textContent
         };
 
         // Directly respond to the sender (popup),

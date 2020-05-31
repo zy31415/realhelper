@@ -10,6 +10,7 @@ const setPropertyInfo = info => {
     document.getElementById('MLSNumber').textContent = info.mls;
     document.getElementById('propertyAddress').textContent = info.address;
     document.getElementById('price').textContent = info.price;
+    document.getElementById('title').textContent = info.title;
 };
 
 // Once the DOM is ready...

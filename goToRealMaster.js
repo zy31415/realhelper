@@ -11,6 +11,7 @@ goToRealMaster.onclick = function (element) {
     request.open('POST', 'http://www.realmaster.com/1.5/props/autocompleteGetNext', true);
 
     request.onload = function() {
+        alert("here");
         // Begin accessing JSON data here
         var data = JSON.parse(this.response);
 
@@ -23,7 +24,6 @@ goToRealMaster.onclick = function (element) {
     }
 
     request.setRequestHeader("Content-type", "application/json");
-
     // Send request
     var MLSNumber = document.getElementById('MLSNumber').textContent;
     request.send(JSON.stringify({"s": MLSNumber}));
