@@ -14,9 +14,10 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
     // First, validate the message's structure.
     if ((msg.from === 'popup') && (msg.subject === 'PropertyInfo')) {
 
+        let addr = document.getElementById('listingAddress').innerText.replace('\n', ', ');
         var propertyInfo = {
             mls: document.getElementById("MLNumberVal").textContent,
-            address: document.getElementById('listingAddress').textContent,
+            address: addr,
             price: document.getElementById('listingPrice').textContent,
             title: document.getElementById('propertyDetailsSectionContentSubCon_Title').getElementsByClassName('propertyDetailsSectionContentValue')[0].textContent
         };
